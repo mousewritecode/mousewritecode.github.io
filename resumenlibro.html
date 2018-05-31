@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-05-31 jue 15:53 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="pablo" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org67cbba1">1. El fueguino</a></li>
+<li><a href="#org2d8ac5f">2. ¡Falta una!</a></li>
+<li><a href="#org289da46">3. Una sorpresa</a></li>
+<li><a href="#org5a502ac">4. ¿Ovnis o marcianos?</a></li>
+<li><a href="#org1474a7d">5. Terrible amenaza</a></li>
+<li><a href="#org82275f0">6. Y ahora ¿que?</a></li>
+<li><a href="#org5786b5d">7. Rumbo desconocido</a></li>
+<li><a href="#org3706348">8. !Contratado¡</a></li>
+<li><a href="#org6130a17">9. El pioneta</a></li>
+<li><a href="#org7d1efd4">10. Perico desaparece</a></li>
+<li><a href="#org1686ac4">11. No era el mar&#x2026;</a></li>
+<li><a href="#orgf8614a1">12. Un ojo en la oscuridad</a></li>
+<li><a href="#org3b4a156">13. Mundo azul</a></li>
+<li><a href="#org7d50607">14. Un puerto oscuro</a></li>
+<li><a href="#org7895d33">15. El puma y la caverna</a></li>
+<li><a href="#orgdd6efd6">16. ¿Quién era Milodón?</a></li>
+<li><a href="#org3920ab9">17. Sí, mi capitán</a></li>
+<li><a href="#orgb097a67">18. Mil canales y mil islas</a></li>
+<li><a href="#org598326d">19. Los rebaños del capitán</a></li>
+<li><a href="#org17db90d">20. La venganza</a></li>
+<li><a href="#orgd460afe">21. ¿Dónde está Mirasol?</a></li>
+<li><a href="#org7afd9bd">22. Golfos y ventisqueros</a></li>
+<li><a href="#orgb4cc27f">23. Dos que se pierden</a></li>
+<li><a href="#orgfed34a0">24. El brujo</a></li>
+<li><a href="#orgbca4222">25. Otra huella</a></li>
+<li><a href="#org2115aec">26. Una gran V en el cielo</a></li>
+<li><a href="#org0e96507">27. El bosque sumergido</a></li>
+<li><a href="#orgac94725">28. Extraño encuentro</a></li>
+<li><a href="#orgd767e10">29. Las dos serpientes</a></li>
+<li><a href="#orgee1f8e3">30. El buque fantasma</a></li>
+<li><a href="#org956a251">31. El rapto</a></li>
+<li><a href="#org6c5c9ff">32. Aquí, torre de control&#x2026;</a></li>
+<li><a href="#org0563710">33. Un pájaro más grande</a></li>
+<li><a href="#org3e53d64">34. Laberintos negros</a></li>
+<li><a href="#org8a9fc72">35. Apenas un papirote</a></li>
+<li><a href="#org805bca1">36. Palacio de verdad</a></li>
+<li><a href="#org99eba7a">37. Larga espera</a></li>
+<li><a href="#org1b40e10">38. Casi un aspirante</a></li>
+<li><a href="#org8eb7991">39. El puerto de pie</a></li>
+<li><a href="#org0e2ec99">40. El pirata sonriente</a></li>
+<li><a href="#org0758364">41. Premio con estrellas</a></li>
+<li><a href="#orgeedf29a">42. El pueblo fantasma</a></li>
+<li><a href="#org3839347">43. La chicharra en el camino</a></li>
+<li><a href="#org049e4e4">44. La pastora de cabras</a></li>
+<li><a href="#org25e366e">45. El gran desierto</a></li>
+<li><a href="#orgef27a9e">46. El pucará</a></li>
+<li><a href="#org05c94d7">47. Un estadio de gigantes</a></li>
+<li><a href="#org331516f">48. <i>Miss</i> Chile</a></li>
+<li><a href="#org870f6b7">49. Pietro</a></li>
+<li><a href="#orgcd0c45b">50. Tremenda sorpresa</a></li>
+<li><a href="#orgd504730">51. ¡Mi perico!</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org67cbba1" class="outline-2">
+<h2 id="org67cbba1"><span class="section-number-2">1</span> El fueguino</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Perico esta triste porque sabe que tiene que dejar la escuela. Solo sabe contar hasta 30 porque no queria aprender a contar más de cincuanta, ya que su papa lo mandaria a cuidar el ganado de ovejas. Pero ahora su papá lo mandara de todos modos. 
+</p>
+</div>
+</div>
+<div id="outline-container-org2d8ac5f" class="outline-2">
+<h2 id="org2d8ac5f"><span class="section-number-2">2</span> ¡Falta una!</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+A perico se le pierde una oveja, pero la encuentra pariendo, y a la cria le pone Marisol.g
+</p>
+</div>
+</div>
+<div id="outline-container-org289da46" class="outline-2">
+<h2 id="org289da46"><span class="section-number-2">3</span> Una sorpresa</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Perico hace su flauta y sueña con vajar por Chile. Las ovejas son atacadas por un perro de raza inglesa y chilena. Lo mata salvando a Marisol y le da pena por eso.
+</p>
+</div>
+</div>
+<div id="outline-container-org5a502ac" class="outline-2">
+<h2 id="org5a502ac"><span class="section-number-2">4</span> ¿Ovnis o marcianos?</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Perico salva a un piloto de avion que cae serca de el.
+</p>
+</div>
+</div>
+<div id="outline-container-org1474a7d" class="outline-2">
+<h2 id="org1474a7d"><span class="section-number-2">5</span> Terrible amenaza</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Perico se entera que su papá vendio las 50 ovejas y perico le da pena porque tendra que dejar a Marisol. Tambien le da una declaración al teniente campos con otro carabinero acerca de la caida del avión.
+</p>
+</div>
+</div>
+<div id="outline-container-org82275f0" class="outline-2">
+<h2 id="org82275f0"><span class="section-number-2">6</span> Y ahora ¿que?</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Mr Smith (de barba rubia) y su ayudante van a buscar las ovejas con un camion, y perico se cola con las obejas para cuidar a Marisol hasta que aprenda a comer sola (o eso piensa el), asi es que se va con ellas en secreto en el vehiculo.
+</p>
+</div>
+</div>
+<div id="outline-container-org5786b5d" class="outline-2">
+<h2 id="org5786b5d"><span class="section-number-2">7</span> Rumbo desconocido</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Perico viajo en el camion con las ovejas primero hasta Puerto Porvenir y luego a un lugar que no conocia.
+</p>
+</div>
+</div>
+<div id="outline-container-org3706348" class="outline-2">
+<h2 id="org3706348"><span class="section-number-2">8</span> !Contratado¡</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Perico fuen contratado para cuidar a las ovejas por Mr Smith y su pioneta (a quienes conosio en su casa cuando fueron a buscar a las ovejas), y se fue con ellos donde llevaban a los animales en una barcaza. Perico se encargaba todo el tiempo de esconder a Marisol.
+</p>
+</div>
+</div>
+<div id="outline-container-org6130a17" class="outline-2">
+<h2 id="org6130a17"><span class="section-number-2">9</span> El pioneta</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+El pioneta le cuenta a Perico que van a Punta Arenas.
+</p>
+</div>
+</div>
+<div id="outline-container-org7d1efd4" class="outline-2">
+<h2 id="org7d1efd4"><span class="section-number-2">10</span> Perico desaparece</h2>
+<div class="outline-text-2" id="text-10">
+<p>
+En un astillero (donde hacen barcos), en Punta Arenas, Perico supo que lo reconocieron por el pioneta, y se esconde en el barco llevandose a Marisol.
+</p>
+</div>
+</div>
+<div id="outline-container-org1686ac4" class="outline-2">
+<h2 id="org1686ac4"><span class="section-number-2">11</span> No era el mar&#x2026;</h2>
+<div class="outline-text-2" id="text-11">
+<p>
+Anduvo por los motores del barco y luego se econdio nuevamente con las ovejas, ahi el pioneta le informo que iban por el Estrecho de Magallanes y que le avisaria cuando llegaran a puerto. 
+</p>
+</div>
+</div>
+<div id="outline-container-orgf8614a1" class="outline-2">
+<h2 id="orgf8614a1"><span class="section-number-2">12</span> Un ojo en la oscuridad</h2>
+<div class="outline-text-2" id="text-12">
+<p>
+Pasaron por Punta Arenas luego por un faro que esta sobre un peñon llamado evangelistas. Perico le enseña a comer a Marisol y planea vajarse con ella en Puerto Natales para volver a su casa.
+</p>
+</div>
+</div>
+<div id="outline-container-org3b4a156" class="outline-2">
+<h2 id="org3b4a156"><span class="section-number-2">13</span> Mundo azul</h2>
+<div class="outline-text-2" id="text-13">
+<p>
+Pasando el Estrello y llegando al oceano Atlántico pasaron cerca de un Iceberg, y casi chocan, luego su amigo (el pioneta) le manda entre la comida de las ovejas, proviciones y un mensaje que tiene que bajarse cuando llegen a puerto, luego pasa sin que perico se de cuenta, por el peligroso paso de Kirke.
+</p>
+</div>
+</div>
+<div id="outline-container-org7d50607" class="outline-2">
+<h2 id="org7d50607"><span class="section-number-2">14</span> Un puerto oscuro</h2>
+<div class="outline-text-2" id="text-14">
+<p>
+Perico desenbarco en Puerto Boris escondido con su oveja Marisol.
+</p>
+</div>
+</div>
+<div id="outline-container-org7895d33" class="outline-2">
+<h2 id="org7895d33"><span class="section-number-2">15</span> El puma y la caverna</h2>
+<div class="outline-text-2" id="text-15">
+<p>
+Perico durmio en un bosque, u cuando deperto se le perdio marisol, que luego encontro cerca de un arroyo. Aparecio un puma, asi que tubo que sumergirse en el agua para que no lo entrara con su oveja. Luego caminando llego a la Cueba del Milodon donde se encontro con un grupo de turistas.
+</p>
+</div>
+</div>
+<div id="outline-container-orgdd6efd6" class="outline-2">
+<h2 id="orgdd6efd6"><span class="section-number-2">16</span> ¿Quién era Milodón?</h2>
+<div class="outline-text-2" id="text-16">
+<p>
+Luego que los turistas lo alimentaran, Perico partio con ellos en sus jeeps. En el viaje el guia le conto del el gran animal que era el Milodon, pero e sus huesos, que encontro un alemán en la cueva, se los llevaron a Inglaterra. Luego pasaron por las Torres del Paine, que impresionaron a Perico.
+</p>
+</div>
+</div>
+<div id="outline-container-org3920ab9" class="outline-2">
+<h2 id="org3920ab9"><span class="section-number-2">17</span> Sí, mi capitán</h2>
+<div class="outline-text-2" id="text-17">
+<p>
+En Puerto Natales, los turistas se suvieron a su barco llamado <i>seagull</i> y Perico consiguio trabajo con el capitán Miguel Benavente. Pero iba a Puerto Cisnes, hacia el norte, y no a Laguna de los Cisnes de Tierra del Fuego, cerca de donde vivia él.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb097a67" class="outline-2">
+<h2 id="orgb097a67"><span class="section-number-2">18</span> Mil canales y mil islas</h2>
+<div class="outline-text-2" id="text-18">
+<p>
+Pasaron por el canal de Kirke, y luego se refugiaron en una isla cerca de los lobos del capitan en una cueva. El capitan sospechava de un tal Cara de Raton le habia robado lobos (marinos).
+</p>
+</div>
+</div>
+<div id="outline-container-org598326d" class="outline-2">
+<h2 id="org598326d"><span class="section-number-2">19</span> Los rebaños del capitán</h2>
+<div class="outline-text-2" id="text-19">
+<p>
+Navegando entre las islas, encontraror el cúter (barco) de el Cara de Raton, y el capitán trato de atraparlo, pero se le escapo. Pero al menos le quito los cueros de lobo que habia obtenido.
+</p>
+</div>
+</div>
+<div id="outline-container-org17db90d" class="outline-2">
+<h2 id="org17db90d"><span class="section-number-2">20</span> La venganza</h2>
+<div class="outline-text-2" id="text-20">
+<p>
+Pasaron por la isla Wellington, donde esta el Puerto Eden y luego se refugiaron en el faro San Pedro, en una islita cerca de golfo de Penas. Divisaron al Cara de Raton navegando cerca.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd460afe" class="outline-2">
+<h2 id="orgd460afe"><span class="section-number-2">21</span> ¿Dónde está Mirasol?</h2>
+<div class="outline-text-2" id="text-21">
+<p>
+Perico ve pingüinos en la isla del faro, y se da cuenta que su oveja no esta, luego se da cuenta que la robo el Cara de Raton y sale con el Capitan Buenavente a buscarlo en el cúter, lo encuentran y se la quitan. Perico piensa en escribirle a su papa para decirle que aún no quiere volver. Van hacia el norte, hacia el golfo de Penas, en la Bahia de San Quintin.
+</p>
+</div>
+</div>
+<div id="outline-container-org7afd9bd" class="outline-2">
+<h2 id="org7afd9bd"><span class="section-number-2">22</span> Golfos y ventisqueros</h2>
+<div class="outline-text-2" id="text-22">
+<p>
+Navegando por golfos y ventisqueros llegaron al fierdo Aldunate donde esperaban los amigos del capitan y la ahijada, Catalina. Perico desidio quedarse a trabajar con el dueño de la casa, rebisando faros y hacerce amigo del Pancho. Le entrego la carta para el papá al capitan, que hiba a entregar en Puerto Cisnes, y se despidieron.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb4cc27f" class="outline-2">
+<h2 id="orgb4cc27f"><span class="section-number-2">23</span> Dos que se pierden</h2>
+<div class="outline-text-2" id="text-23">
+<p>
+Cuando fueron a buscar a Mirasol vieron que habia salido, porque el corral tenia avertura muy grandes, asi que Perico, Pancho y Catalina empezaron a buscarla, luego Perico se metio solo a un bosque donde decian que habia un brujo. acercandose a un ruido de corte de arboles, alcanzo a esquivar un arbol que le caia ensima, y una de sus ramas lo alcanzo tirandolo al suelo.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfed34a0" class="outline-2">
+<h2 id="orgfed34a0"><span class="section-number-2">24</span> El brujo</h2>
+<div class="outline-text-2" id="text-24">
+<p>
+El brujo, que era sordo, lo enctro y lo curo en su choza. Tambien le ofrecio curtirle su cuerto de lobo de mar y lo llevaria ha buscar a Mirasol cuando pudiera caminar.
+</p>
+</div>
+</div>
+<div id="outline-container-orgbca4222" class="outline-2">
+<h2 id="orgbca4222"><span class="section-number-2">25</span> Otra huella</h2>
+<div class="outline-text-2" id="text-25">
+<p>
+Perico le grito al brujo en la oreja para decansar, y ahi vieron una huella de Mirasol.
+</p>
+</div>
+</div>
+<div id="outline-container-org2115aec" class="outline-2">
+<h2 id="org2115aec"><span class="section-number-2">26</span> Una gran V en el cielo</h2>
+<div class="outline-text-2" id="text-26">
+<p>
+el siguiente dia de busqueda, Perico desperto y vio una bandada de bandurrias, sigueñas chilenas, y luego se separo del brujo. El brujo le regalo proviciones y el le regalo su flauta, para ver si puede encontrar a Marisol.
+</p>
+</div>
+</div>
+<div id="outline-container-org0e96507" class="outline-2">
+<h2 id="org0e96507"><span class="section-number-2">27</span> El bosque sumergido</h2>
+<div class="outline-text-2" id="text-27">
+<p>
+Perico llega a la laguna San Rafael, donde ve un bosque sumergido. Luego vuelve a ver el barco de las turistan, luego en otro barco lo suben y se va con ellos. Es suche, algo menor que marinero, en el barco. Luego se baja en Puerto Cisnes sin decirle a nadie, y queda solo.
+</p>
+</div>
+</div>
+<div id="outline-container-orgac94725" class="outline-2">
+<h2 id="orgac94725"><span class="section-number-2">28</span> Extraño encuentro</h2>
+<div class="outline-text-2" id="text-28">
+<p>
+Perico se encontro con el piloto que habia salvado. Este le compro ropa y lo alimento. Luego fueron en la avioneta del piloto a buscar al Capitan lobero, Miguel Buenaventura, pero no lo vieron. Asi es que mejor dieron la vuelata, y aterrizaron en Chiloe, de donde era el piloto.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd767e10" class="outline-2">
+<h2 id="orgd767e10"><span class="section-number-2">29</span> Las dos serpientes</h2>
+<div class="outline-text-2" id="text-29">
+<p>
+Pedro, el piloto, le conto a Perico la legenda de la serpiente Caicaivilu, que tenia un hijo llamado Trauco, que hera mitad humano. Este se enamoro de una niña, y su madre la serpiente la trato de aprisionar, pero la salvo Trentren, la serpiente buena. 
+Pedro lo llevo donde su madre, la que le regalo un avion de juguete en agradecimiento por salvar a su hijo. Luego partieron en el avion para Puerto Montt.
+</p>
+</div>
+</div>
+<div id="outline-container-orgee1f8e3" class="outline-2">
+<h2 id="orgee1f8e3"><span class="section-number-2">30</span> El buque fantasma</h2>
+<div class="outline-text-2" id="text-30">
+<p>
+Llegaron a Puerto Mont y aterrizaron en el aeropuerto el Tepual. Un monitor lo saco a pasear a la ciudad. El le conto la leyenda del Caleuche que en noches de tempestad hace naufragar barcos, y en noches de luna se roba pescadores dormidos en las caletas. Visitaron un avion grande y perico se compro un cuaderno para describirle sus viajes a su papá.
+</p>
+</div>
+</div>
+<div id="outline-container-org956a251" class="outline-2">
+<h2 id="org956a251"><span class="section-number-2">31</span> El rapto</h2>
+<div class="outline-text-2" id="text-31">
+<p>
+El capitan Pedro le conto, mientras comian mariscos en un restorant, la leyenda de la Ciudad de Los Cesares, que eran fantasmas. Luego lo interrumpieron porque se robaron el avion que iba a pilotear el, el 628, por un desconocido. Tubieron que enviar a los pasajeros a hoteles.
+</p>
+</div>
+</div>
+<div id="outline-container-org6c5c9ff" class="outline-2">
+<h2 id="org6c5c9ff"><span class="section-number-2">32</span> Aquí, torre de control&#x2026;</h2>
+<div class="outline-text-2" id="text-32">
+<p>
+En la noche, en el hotel, llamaron al capitan Pedro Alvarez (el piloto) diciendole que el avion 628 estaba llegando a Valdivia, y que se lo habia robado un pasajero llamado Junetzy, pero cuando llego en su avion al areopuerto de Pichoy, en Valdivia con Perico, supo que habia escapado denuevo. Luego, Pedro, el piloto, llevo a Perico a conocer Valdivia.
+</p>
+</div>
+</div>
+<div id="outline-container-org0563710" class="outline-2">
+<h2 id="org0563710"><span class="section-number-2">33</span> Un pájaro más grande</h2>
+<div class="outline-text-2" id="text-33">
+<p>
+El piloto Pedro Alvarez tubo que ir al puerto aéreo con su pequeño avion, junto al rio Cautín, para cambiar de avion y pilotear el234-B, que era mucho mas grande y poderoso para tratar de atrapar al pirata que se robo el 628, le informaron que se dirijia hacia Concepcion por conbustible y hacia esa direccion se fue volando con Perico.
+</p>
+</div>
+</div>
+<div id="outline-container-org3e53d64" class="outline-2">
+<h2 id="org3e53d64"><span class="section-number-2">34</span> Laberintos negros</h2>
+<div class="outline-text-2" id="text-34">
+<p>
+En Concepcion, El capitan Pedro (el piloto) dejo a Perico con Pancho, para que lo lleve a conocer. El joven lo llevo a la mina de carbon en Lota. En ella Pancho le conto sobre como su padre, que fue minero, se enfermo de <i>silicosis</i> por causa del polvo del carbon. Tambien estaba el <i>gas grisú</i> que para detectarlo, los mineros llevaban pajaritos en jaulas. Luego se perdieron dentro de la mina, pero luegos los encontraron.
+</p>
+</div>
+</div>
+<div id="outline-container-org8a9fc72" class="outline-2">
+<h2 id="org8a9fc72"><span class="section-number-2">35</span> Apenas un papirote</h2>
+</div>
+<div id="outline-container-org805bca1" class="outline-2">
+<h2 id="org805bca1"><span class="section-number-2">36</span> Palacio de verdad</h2>
+</div>
+<div id="outline-container-org99eba7a" class="outline-2">
+<h2 id="org99eba7a"><span class="section-number-2">37</span> Larga espera</h2>
+</div>
+<div id="outline-container-org1b40e10" class="outline-2">
+<h2 id="org1b40e10"><span class="section-number-2">38</span> Casi un aspirante</h2>
+</div>
+<div id="outline-container-org8eb7991" class="outline-2">
+<h2 id="org8eb7991"><span class="section-number-2">39</span> El puerto de pie</h2>
+</div>
+<div id="outline-container-org0e2ec99" class="outline-2">
+<h2 id="org0e2ec99"><span class="section-number-2">40</span> El pirata sonriente</h2>
+</div>
+<div id="outline-container-org0758364" class="outline-2">
+<h2 id="org0758364"><span class="section-number-2">41</span> Premio con estrellas</h2>
+</div>
+<div id="outline-container-orgeedf29a" class="outline-2">
+<h2 id="orgeedf29a"><span class="section-number-2">42</span> El pueblo fantasma</h2>
+</div>
+<div id="outline-container-org3839347" class="outline-2">
+<h2 id="org3839347"><span class="section-number-2">43</span> La chicharra en el camino</h2>
+</div>
+<div id="outline-container-org049e4e4" class="outline-2">
+<h2 id="org049e4e4"><span class="section-number-2">44</span> La pastora de cabras</h2>
+</div>
+<div id="outline-container-org25e366e" class="outline-2">
+<h2 id="org25e366e"><span class="section-number-2">45</span> El gran desierto</h2>
+</div>
+<div id="outline-container-orgef27a9e" class="outline-2">
+<h2 id="orgef27a9e"><span class="section-number-2">46</span> El pucará</h2>
+</div>
+<div id="outline-container-org05c94d7" class="outline-2">
+<h2 id="org05c94d7"><span class="section-number-2">47</span> Un estadio de gigantes</h2>
+</div>
+<div id="outline-container-org331516f" class="outline-2">
+<h2 id="org331516f"><span class="section-number-2">48</span> <i>Miss</i> Chile</h2>
+</div>
+<div id="outline-container-org870f6b7" class="outline-2">
+<h2 id="org870f6b7"><span class="section-number-2">49</span> Pietro</h2>
+</div>
+<div id="outline-container-orgcd0c45b" class="outline-2">
+<h2 id="orgcd0c45b"><span class="section-number-2">50</span> Tremenda sorpresa</h2>
+</div>
+<div id="outline-container-orgd504730" class="outline-2">
+<h2 id="orgd504730"><span class="section-number-2">51</span> ¡Mi perico!</h2>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: pablo</p>
+<p class="date">Created: 2018-05-31 jue 15:53</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
